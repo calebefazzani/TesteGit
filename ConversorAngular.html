@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="conversor">
+<head>
+	<title>Conversão entre bases</title>
+	<script src="angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="script.js"></script>
+</head>
+<body ng-controller="ConversorCtrl">
+	<div style="width: 600px;text-align:center;margin-top:20px;margin-left:auto;margin-right:auto;">
+		<table class="table table-striped">
+			<tr>
+				<th>Base</th>
+				<th></th>
+				<th>Resultado</th>
+			</tr>
+			<tr>
+				<td>Decimal:</td>
+				<td><input type="text" ng-model="decimal" id="dec" placeholder="Digite o numero decimal"></td>
+				<td>{{dec}}</td>
+			</tr>
+			<tr>
+				<td>Binário:</td>
+				<td><input type="text" ng-model="binario" id="bin" placeholder="Digite o numero binario"></td>
+				<td>{{bin}}</td>
+			</tr>
+			<tr>
+				<td>Octal:</td>
+				<td><input type="text" ng-model="octal" id="oct" placeholder="Digite o numero octal"></td>
+				<td>{{oct}}</td>
+			</tr>
+			<tr>
+				<td>Hexadecimal:</td>
+				<td><input type="text" ng-model="hexadecimal" id="hex" placeholder="Digite o numero hexadecimal"></td>
+				<td>{{hex|uppercase}}</td>
+			</tr>
+			{{decBin()}}
+
+		</table>
+	</div>
+
+</body>
+</html>
